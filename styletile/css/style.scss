@@ -4,6 +4,7 @@ $tertiary-green: #2d6a4f;
 $warning-color: #eb6d6d;
 $italic: italic;
 $primary-text: #fafafa;
+$primary-border-radius: 15px;
 
 * {
   box-sizing: border-box;
@@ -39,12 +40,12 @@ h2 {
 
 .btn {
   margin: 0 8px;
-  border-radius: 24px;
+  border-radius: $primary-border-radius;
 }
 
 .card {
   border: 1px solid #999;
-  border-radius: 24px;
+  border-radius: $primary-border-radius;
   max-width: 440px;
 
   .card-title {
@@ -94,7 +95,7 @@ nav {
     .avatar {
       width: 40px;
       height: 40px;
-      border-radius: 24px;
+      border-radius: 25px;
       background: $primary-text;
     }
   }
@@ -129,7 +130,7 @@ footer {
     height: 300px;
     width: 100%;
     margin: 20px;
-    border-radius: 24px;
+    border-radius: $primary-border-radius;
     padding: 10px;
   }
   .item p {
