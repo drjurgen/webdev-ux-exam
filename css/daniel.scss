@@ -2,6 +2,7 @@ $primary-green: #d8f3dc;
 $secondary-green: #40916c;
 $tertiary-green: #2d6a4f;
 $warning-color: #eb6d6d;
+$primary-text: #fafafa;
 
 footer {
   position: fixed;
@@ -37,7 +38,9 @@ footer {
 h2 {
   font-size: 22px;
 }
-
+.welcome {
+  color: $primary-text;
+}
 .logo {
   display: flex;
   justify-content: center;
