@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
 $primary-green: #d8f3dc;
 $secondary-green: #40916c;
 $tertiary-green: #2d6a4f;
@@ -9,6 +17,7 @@ footer {
   bottom: 0;
   width: 100%;
   background: $primary-green;
+  color: black;
 }
 
 .login {
