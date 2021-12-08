@@ -5,12 +5,15 @@
   margin: 0;
   font-family: "Atkinson Hyperlegible", sans-serif;
 }
-
+img {
+  width: 100%;
+}
 $primary-green: #d8f3dc;
 $secondary-green: #40916c;
 $tertiary-green: #2d6a4f;
 $warning-color: #eb6d6d;
 $primary-text: #fafafa;
+$primary-border-radius: 15px;
 
 footer {
   position: fixed;
@@ -56,4 +59,83 @@ h2 {
 }
 .logo img {
   margin-bottom: -10px;
+}
+
+.dashboard-container-1,
+.dashboard-container-2,
+.dashboard-container-3 {
+  border-radius: 15px 15px 0 0;
+  border-top: 30px solid $secondary-green;
+  background-color: $primary-green;
+  padding: 0.75rem;
+}
+.dashboard-container-1 {
+  height: 700px;
+}
+.dashboard-container-2 {
+  height: 335px;
+  margin-bottom: 30px;
+}
+
+.dashboard-container-3 {
+  height: 335px;
+}
+.divider {
+  box-sizing: none !important;
+  height: 30px;
+  width: 100%;
+  background-color: $secondary-green;
+  padding: 0 !important;
+  margin: 15px 0;
+  // border-right: 11px solid $secondary-green;
+}
+
+.dash-link {
+  background: grey;
+  height: 80px;
+  width: 100%;
+  margin: 2px 0;
+  border-radius: $primary-border-radius;
+}
+
+.icon {
+  width: 40px;
+}
+.content-wrapper {
+  background-color: $primary-green;
+  border-radius: $primary-border-radius;
+  margin-bottom: 20px;
+}
+.item-wrapper {
+  display: flex;
+}
+
+.assignments {
+  background-image: url(/images/assignments-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.schedule {
+  background-image: url(/images/schedule-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profile {
+  background-image: url(/images/profile-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.resources {
+  background-image: url(/images/resources-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.secondary-nav {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 600px) {
+  .dash-link {
+    height: 10rem;
+  }
 }
