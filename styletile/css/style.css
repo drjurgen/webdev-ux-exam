@@ -49,11 +49,28 @@ h2 {
 
 nav {
   margin: 0 0 40px 0;
+<<<<<<< HEAD
   padding: 24px 32px;
+=======
+  padding: 24px 0px;
+>>>>>>> styletile-tylle
   background-color: #2d6a4f;
   display: flex;
   align-items: center;
   justify-content: space-between;
+<<<<<<< HEAD
+=======
+}
+@media only screen and (min-width: 600px) {
+  nav {
+    padding: 24px 32px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav .col.s2 {
+    margin-left: unset !important;
+  }
+>>>>>>> styletile-tylle
 }
 nav h1 {
   font-size: 1.5rem;
@@ -90,6 +107,16 @@ nav .nav-link,
 nav .nav-logo-link {
   text-decoration: none;
   color: #fafafa;
+<<<<<<< HEAD
+=======
+}
+nav .logo-wrapper {
+  display: flex;
+}
+nav .logo-wrapper img {
+  width: unset;
+  max-height: 95%;
+>>>>>>> styletile-tylle
 }
 
 footer {
