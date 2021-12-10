@@ -1,3 +1,177 @@
-.nav {
-  padding: 5px;
+@import "./style.scss";
+img {
+  width: 100%;
+}
+p,
+h4 {
+  color: $primary-text;
+}
+.schedule {
+  background-color: $primary-green;
+
+  #tabs-swipe-demo {
+    display: flex;
+
+    @media only screen and (min-width: 993px) {
+      display: none;
+    }
+  }
+  .schedule-title {
+    width: 100%;
+    text-align: center;
+    color: $primary-text;
+    background-color: $secondary-green;
+    padding: 5px 0;
+    font-size: 20px;
+
+    @media only screen and (min-width: 993px) {
+      color: black;
+      font-size: 50px;
+      background-color: unset;
+    }
+  }
+  .schedule-dates-nav {
+    display: none;
+    text-align: center;
+    li {
+      background-color: $secondary-green;
+    }
+    @media only screen and (min-width: 993px) {
+      display: block;
+
+      p {
+        color: $primary-text;
+      }
+      .schedule-date-nav {
+        display: flex;
+        flex-direction: column;
+      }
+      .schedule-date-nav > * {
+        align-self: center;
+      }
+    }
+  }
+}
+.tabs .indicator {
+  background-color: $primary-text !important;
+}
+.weekdays {
+  background-color: $secondary-green;
+  a {
+    color: $primary-text !important;
+  }
+}
+.active-hour {
+  background-color: $tertiary-green;
+}
+.cancelled-hour {
+  background-color: $warning-color;
+}
+.inactive-hour {
+  background-color: #4b81ab;
+}
+.schedule-date {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media only screen and (min-width: 993px) {
+    display: none;
+  }
+
+  p,
+  h3 {
+    color: $secondary-green;
+  }
+  .date-wrapper {
+    width: 100%;
+  }
+  .date-wrapper::after {
+    content: "";
+    display: inline-block;
+    border-bottom: 2px $tertiary-green solid;
+
+    width: 100%;
+  }
+}
+.schedule-hour {
+  height: 65px;
+  margin-bottom: 10px !important;
+  padding: 0 !important;
+
+  .schedule-time {
+    display: flex;
+    flex-direction: column;
+  }
+  .schedule-time:not(.schedule-main-time) {
+    @media only screen and (min-width: 993px) {
+      display: none;
+    }
+  }
+
+  .hour-time {
+    position: relative;
+    display: Flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    p {
+      color: $secondary-green;
+      font-size: 10px;
+    }
+    .hour-time-first {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .hour-time-first::after {
+      content: "";
+      display: inline-block;
+      border-left: 2px $tertiary-green solid;
+      height: 50%;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+    }
+  }
+  .hour-field {
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px !important;
+    h4 {
+      margin: 0;
+      font-size: 15px;
+    }
+    .hour-field-subject {
+      display: Flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        font-size: 12px;
+      }
+      .hour-field-subject-time {
+        font-size: 10px;
+      }
+    }
+    .hour-field-room,
+    .hour-field-subject {
+      margin-top: 5px;
+    }
+  }
+  .schedule-assignments {
+    padding: 0;
+    .date-wrapper {
+      margin-bottom: 10px;
+    }
+  }
+  .assignment-text {
+    background-color: $tertiary-green;
+    padding: 10px;
+    p,
+    h4 {
+      color: $primary-text;
+    }
+  }
 }
