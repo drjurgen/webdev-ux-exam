@@ -11,6 +11,7 @@ img {
 $primary-green: #d8f3dc;
 $secondary-green: #40916c;
 $tertiary-green: #2d6a4f;
+$heading-link: #1b4332;
 $warning-color: #eb6d6d;
 $primary-text: #fafafa;
 $primary-border-radius: 15px;
@@ -60,21 +61,27 @@ h2 {
 .logo img {
   margin-bottom: -10px;
 }
-
+h1 {
+  margin-left: 80px;
+  margin-bottom: 20px;
+  color: $heading-link;
+}
 .special-container {
   max-width: 1600px;
   margin: 0 auto;
 }
 .dash-link {
-  height: 80px;
+  height: 110px;
   width: 100%;
   margin: 5px 0;
   border-radius: $primary-border-radius;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px !important;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px !important;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px !important;
+  overflow: scroll;
 }
 
 .icon {
-  width: 40px;
+  width: 60px;
 }
 .content-wrapper {
   background-color: $primary-green;
@@ -91,8 +98,12 @@ h2 {
     margin: 10px;
   }
   h2 {
-    margin: 20px;
+    margin: 10px 5px;
   }
+}
+.news-box {
+  display: flex;
+  flex-direction: column;
 }
 .link-wrapper {
   display: flex;
@@ -104,46 +115,77 @@ h2 {
 }
 .content-img {
   margin: 15px 0;
+  border-radius: $primary-border-radius;
 }
 .assignments {
   background-image: url(/images/assignments-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .schedule {
   background-image: url(/images/schedule-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 10px;
+  background-position: center;
 }
 .profile {
   background-image: url(/images/profile-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .resources {
   background-image: url(/images/resources-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 10px;
+  background-position: center;
 }
 
 .secondary-nav {
   margin-bottom: 20px;
 }
+.clamped {
+  color: $heading-link;
+  font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  padding: 10px;
+}
 
+.assignment-paragraph {
+  font-size: 0.5rem;
+  margin-left: 10px;
+  color: $tertiary-green;
+}
+.assignment-link {
+  margin-left: 10px;
+}
+.dash-button {
+  height: 20px;
+  font-size: 10px;
+}
+
+#profile-splash {
+  background-image: url(/images/profile-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+  margin-top: -40px;
+}
 @media only screen and (min-width: 600px) {
   .dash-link {
-    height: 8rem;
+    height: 200px;
   }
   .swap {
     display: flex;
     flex-direction: row-reverse;
   }
-}
-
-.clamped {
-  color: $tertiary-green;
-  font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
-  padding: 10px;
+  .assignment-paragraph {
+    font-size: 1rem;
+  }
+  #profile-splash {
+    height: 250px;
+  }
 }
