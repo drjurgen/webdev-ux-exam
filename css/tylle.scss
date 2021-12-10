@@ -52,6 +52,108 @@ h4 {
     }
   }
 }
+.assignments {
+  .assignment-title {
+    margin-top: 40px;
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 15px;
+      color: black;
+    }
+  }
+  .assignment-carousel {
+    height: 100px;
+    img {
+      max-width: 150px;
+    }
+    .carousel {
+      transform-origin: 0% 0%;
+      height: 100px;
+      .carousel-item {
+        height: 100px !important;
+      }
+    }
+    @media only screen and (min-width: 993px) {
+      display: none;
+    }
+  }
+  .assignment-carousel-large {
+    display: none;
+    @media only screen and (min-width: 993px) {
+      display: block;
+    }
+  }
+  .assignment-subjects {
+    .subject-ux {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(164, 95, 190, 0.7) 67.71%
+      );
+    }
+    .subject-wd {
+      background: linear-gradient(
+        180deg,
+        rgba(216, 243, 220, 0) 0%,
+        #4b81ab 78.12%
+      );
+    }
+    .subject-db {
+      background: linear-gradient(
+        180deg,
+        rgba(64, 145, 108, 0) 0%,
+        #40916c 95.83%
+      );
+    }
+    .assignment-subject {
+      border-radius: $primary-border-radius;
+      min-height: 200px;
+      margin-bottom: 40px;
+      p,
+      h4 {
+        color: black;
+      }
+      h4 {
+        font-size: 15px;
+      }
+      .assignment-subject-title {
+        margin-top: 20px;
+        .subject-title-text {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          h4 {
+            margin: 0;
+          }
+          .subject-title-time {
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+
+      .assignment-subject-description {
+        font-size: 12px;
+        .description-deadline,
+        .material-title {
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+      }
+      .assignment-subject-material {
+        display: flex;
+        flex-direction: column;
+        .material-button {
+          margin-bottom: 5px;
+          width: 98px;
+        }
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
 .tabs .indicator {
   background-color: $primary-text !important;
 }

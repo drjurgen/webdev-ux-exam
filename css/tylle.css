@@ -249,6 +249,96 @@ h4 {
   }
 }
 
+.assignments .assignment-title {
+  margin-top: 40px;
+}
+.assignments .assignment-title h1 {
+  font-size: 25px;
+}
+.assignments .assignment-title p {
+  font-size: 15px;
+  color: black;
+}
+.assignments .assignment-carousel {
+  height: 100px;
+}
+.assignments .assignment-carousel img {
+  max-width: 150px;
+}
+.assignments .assignment-carousel .carousel {
+  transform-origin: 0% 0%;
+  height: 100px;
+}
+.assignments .assignment-carousel .carousel .carousel-item {
+  height: 100px !important;
+}
+@media only screen and (min-width: 993px) {
+  .assignments .assignment-carousel {
+    display: none;
+  }
+}
+.assignments .assignment-carousel-large {
+  display: none;
+}
+@media only screen and (min-width: 993px) {
+  .assignments .assignment-carousel-large {
+    display: block;
+  }
+}
+.assignments .assignment-subjects .subject-ux {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(164, 95, 190, 0.7) 67.71%);
+}
+.assignments .assignment-subjects .subject-wd {
+  background: linear-gradient(180deg, rgba(216, 243, 220, 0) 0%, #4b81ab 78.12%);
+}
+.assignments .assignment-subjects .subject-db {
+  background: linear-gradient(180deg, rgba(64, 145, 108, 0) 0%, #40916c 95.83%);
+}
+.assignments .assignment-subjects .assignment-subject {
+  border-radius: 15px;
+  min-height: 200px;
+  margin-bottom: 40px;
+}
+.assignments .assignment-subjects .assignment-subject p,
+.assignments .assignment-subjects .assignment-subject h4 {
+  color: black;
+}
+.assignments .assignment-subjects .assignment-subject h4 {
+  font-size: 15px;
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-title {
+  margin-top: 20px;
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-title .subject-title-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-title .subject-title-text h4 {
+  margin: 0;
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-title .subject-title-text .subject-title-time {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-description {
+  font-size: 12px;
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-description .description-deadline,
+.assignments .assignment-subjects .assignment-subject .assignment-subject-description .material-title {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-material {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.assignments .assignment-subjects .assignment-subject .assignment-subject-material .material-button {
+  margin-bottom: 5px;
+  width: 98px;
+}
+
 .tabs .indicator {
   background-color: #fafafa !important;
 }
