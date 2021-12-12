@@ -66,6 +66,12 @@ h1 {
   color: #1b4332;
 }
 
+.custom {
+  color: #2d6a4f;
+  transform: translateY(7px);
+  margin-top: -5px;
+}
+
 .special-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -82,6 +88,39 @@ h1 {
 
 .icon {
   width: 60px;
+  height: 60px;
+}
+
+.icon-xs {
+  width: 10px;
+}
+
+.icon-sm {
+  width: 30px;
+  transform: translateY(7px);
+}
+
+.icon-med {
+  width: 45px;
+}
+
+.icon-span {
+  margin-top: -5px;
+}
+
+.user-wrapper {
+  display: flex;
+  margin-left: 10px;
+}
+.user-wrapper h2 {
+  margin-left: 10px;
+}
+
+.contact-wrapper {
+  display: flex;
+}
+.contact-wrapper img {
+  margin: 0 15px;
 }
 
 .content-wrapper {
@@ -193,7 +232,25 @@ h1 {
 .clamped {
   color: #1b4332;
   font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+}
+
+.clamped-2 {
+  font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  color: #1b4332;
+}
+
+.clamped-3 {
+  font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  color: #40916c;
   padding: 10px;
+  text-align: center;
+}
+
+.email {
+  color: #1b4332;
+}
+.email .email-link {
+  margin-bottom: -5px;
 }
 
 .assignment-paragraph {
@@ -211,8 +268,23 @@ h1 {
   font-size: 10px;
 }
 
+.link-text {
+  color: #fafafa;
+  margin-left: 10px;
+}
+
+.link-btn {
+  margin-top: 20px;
+  background-color: #40916c;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .spacer {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .profile-container h2 {
@@ -231,6 +303,7 @@ h1 {
 }
 .profile-page .clamped {
   color: #fafafa;
+  padding: 10px;
 }
 
 .profile-image {
@@ -274,17 +347,38 @@ h1 {
 .collapse-wrapper {
   display: flex;
   width: 100%;
-  margin-top: 10px;
+  margin: 10px 15px 0 0;
   justify-content: flex-end;
 }
 .collapse-wrapper img {
   width: 30px;
   height: 15px;
 }
-.collapse-wrapper li.active img {
-  transform: rotate(90deg);
+
+.active .dropdown-arrow {
+  animation-name: rotateit;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: 0.5s;
 }
 
+li:not(.active) .dropdown-arrow {
+  animation-name: rotateback;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: 0.5s;
+}
+
+@keyframes rotateback {
+  0% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotateit {
+  100% {
+    transform: rotate(180deg);
+  }
+}
 @media only screen and (min-width: 600px) {
   .dash-link {
     height: 200px;
@@ -306,6 +400,7 @@ h1 {
   .profile-container {
     max-width: none;
     display: flex;
+    height: 200px;
   }
 
   .desktop-transform {
@@ -316,7 +411,7 @@ h1 {
 
   .profile-image {
     max-width: 200px;
-    height: 100%;
+    height: 190px;
     position: relative;
     top: -50px;
     left: -40px;

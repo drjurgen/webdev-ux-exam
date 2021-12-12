@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/daniel.css" />
     <title>Froodle - Profile</title>
@@ -37,63 +38,74 @@
             </li>
             <li>
               <a href="#" class="nav-link">
-                <div class="avatar"></div>
+                <div class="avatar"><img src="images/sharron.png" alt="" /></div>
               </a>
             </li>
           </ul>
         </nav>
       </header>
     </section>
+    <div class="special-container">
+      <div class="row">
+        <div class="spacer"></div>
+        <div class="col s12 m6 l5 offset-l1">
+          <article class="content-wrapper profile-container">
+            <img class="profile-image" src="images/sharron.png" alt="" />
+            <div class="user-info">
+              <h2 class="clamped-2">Sharon Cedric Brody</h2>
+              <p class="email">
+                <a href="mailto:scb113@froodle.com"
+                  ><span class="material-icons custom">email</span> <span class="email-link"> scb113@froodle.com</span>
+                </a>
+              </p>
+              <p class="main-course">Web Development</p>
+              <a class="waves-effect waves-light btn modal-trigger left link-btn" href="#modal1"
+                >Change password <span><img class="icon-xs" src="images/lock.svg" alt="" /></span
+              ></a>
+            </div>
+            <!-- Modal Trigger -->
 
-    <div class="row">
-      <div class="spacer"></div>
-      <div class="col s12 m6 l5 offset-l1">
-        <article class="content-wrapper profile-container">
-          <img class="profile-image" src="images/girl.png" alt="" />
-          <div class="user-info">
-            <h2>Name LastName</h2>
-            <p>Email@Email.com</p>
-            <p>Web Development</p>
-            <a class="waves-effect waves-light btn modal-trigger left pw-btn" href="#modal1">Change password</a>
-          </div>
-          <!-- Modal Trigger -->
-
-          <!-- Modal Structure -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <h4>Change password</h4>
-              <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <input id="old-pw" type="password" class="validate" />
-                      <label for="old-pw">Old password</label>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4>Change password</h4>
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="old-pw" type="password" class="validate" />
+                        <label for="old-pw">Old password</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="new-pw" type="password" class="validate" />
+                        <label for="new-pw">New password</label>
+                        <div class="btn-small modal-close right">Save changes</div>
+                      </div>
                     </div>
-                    <div class="input-field col s6">
-                      <input id="new-pw" type="password" class="validate" />
-                      <label for="new-pw">New password</label>
-                      <div class="btn-small modal-close right">Save changes</div>
-                    </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-small error">Cancel</a>
               </div>
             </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-small error">Cancel</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <h2>Enrolled Courses & Grades</h2>
-        <div class="col s6">
-          <div class="dash-link all-assignments">
-            <a class="waves-effect waves-light btn modal-trigger left" href="#modal2">Your Grades</a>
-            <div id="modal2" class="modal">
-              <div class="modal-content">
-                <h3 class="grades-heading center">Grades / Marks</h3>
-                <div class="row">
-                  <div class="col s12 l12">
-                    <div class="">
+          <div class="col s6">
+            <div class="dash-link all-assignments">
+              <h2 class="clamped">Grades</h2>
+              <p class="link-text">Here you can see your grades from all your running courses</p>
+              <div class="btn-wrapper">
+                <a class="waves-effect waves-light btn modal-trigger hide-on-med-and-down link-btn" href="#modal2">Your Grades</a>
+                <a class="waves-effect waves-light btn left hide-on-large-only link-btn" href="#mobile-grades">Your Grades</a>
+              </div>
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h3 class="grades-heading center">
+                    Grades / Marks <span><img class="icon" src="images/grade-icon.png" alt="" /></span>
+                  </h3>
+                  <div class="row">
+                    <div class="col s12 l12">
                       <ul class="collapsible popout">
                         <li class="active">
                           <div class="collapsible-header">
@@ -105,7 +117,7 @@
                           <div class="collapsible-body">
                             <ul class="collection">
                               <li class="collection-item avatar">
-                                <img src="images/ux-bg.jpg" alt="" class="circle" />
+                                <img src="images/ux-icon.svg" alt="" class="circle" />
                                 <span class="title">User Experience</span>
                                 <p>1st Semester</p>
                                 <a href="#!" class="secondary-content">
@@ -115,115 +127,295 @@
                             </ul>
                           </div>
                         </li>
-                        <li>
-                          <div class="collapsible-header">Web Development</div>
+                        <li class="">
+                          <div class="collapsible-header">
+                            Web Development
+                            <div class="collapse-wrapper">
+                              <img class="dropdown-arrow" src="images/arrow.svg" alt="" />
+                            </div>
+                          </div>
                           <div class="collapsible-body">
                             <ul class="collection">
                               <li class="collection-item avatar">
-                                <img src="images/ux-bg.jpg" alt="" class="circle" />
-                                <span class="title">User Experience</span>
+                                <img src="images/web-dev-icon.svg" alt="" class="circle" />
+                                <span class="title">Web Development</span>
                                 <p>1st Semester</p>
-                                <a href="#!" class="secondary-content"> Grade: 10</a>
+                                <a href="#!" class="secondary-content">
+                                  <div class="">Grade: 7 <br />Mark: C</div>
+                                </a>
                               </li>
                             </ul>
                           </div>
                         </li>
-                        <li>
-                          <div class="collapsible-header">Databases</div>
+                        <li class="">
+                          <div class="collapsible-header">
+                            Databases
+                            <div class="collapse-wrapper">
+                              <img class="dropdown-arrow" src="images/arrow.svg" alt="" />
+                            </div>
+                          </div>
                           <div class="collapsible-body">
                             <ul class="collection">
                               <li class="collection-item avatar">
-                                <img src="images/ux-bg.jpg" alt="" class="circle" />
-                                <span class="title">User Experience</span>
+                                <img src="images/database-icon.svg" alt="" class="circle" />
+                                <span class="title">Databases</span>
                                 <p>1st Semester</p>
-                                <a href="#!" class="secondary-content"> Grade: 10</a>
+                                <a href="#!" class="secondary-content">
+                                  <div class="">Grade: 10 <br />Mark: B</div>
+                                </a>
                               </li>
                             </ul>
                           </div>
                         </li>
-                        <li>
-                          <div class="collapsible-header">Python & Django</div>
+                        <li class="">
+                          <div class="collapsible-header">
+                            Python &amp; Django
+                            <div class="collapse-wrapper">
+                              <img class="dropdown-arrow" src="images/arrow.svg" alt="" />
+                            </div>
+                          </div>
                           <div class="collapsible-body">
                             <ul class="collection">
                               <li class="collection-item avatar">
-                                <img src="images/ux-bg.jpg" alt="" class="circle" />
-                                <span class="title">User Experience</span>
-                                <p>1st Semester</p>
-                                <a href="#!" class="secondary-content"> Grade: 10</a>
+                                <img src="images/python-icon.svg" alt="" class="circle" />
+                                <span class="title">Python &amp; Django</span>
+                                <p>2nd Semester</p>
+                                <a href="#!" class="secondary-content">
+                                  <div class="">Grade: 10 <br />Mark: B</div>
+                                </a>
                               </li>
                             </ul>
                           </div>
                         </li>
-                        <li>
-                          <div class="collapsible-header">React Native</div>
+                        <li class="">
+                          <div class="collapsible-header">
+                            Web Security
+                            <div class="collapse-wrapper">
+                              <img class="dropdown-arrow" src="images/arrow.svg" alt="" />
+                            </div>
+                          </div>
                           <div class="collapsible-body">
                             <ul class="collection">
                               <li class="collection-item avatar">
-                                <img src="images/ux-bg.jpg" alt="" class="circle" />
-                                <span class="title">User Experience</span>
-                                <p>1st Semester</p>
-                                <a href="#!" class="secondary-content"> Grade: 10</a>
+                                <img src="images/web-security-icon.svg" alt="" class="circle" />
+                                <span class="title">Web Security</span>
+                                <p>2nd Semester</p>
+                                <a href="#!" class="secondary-content">
+                                  <div class="">Grade: 7 <br />Mark: C</div>
+                                </a>
                               </li>
                             </ul>
                           </div>
                         </li>
-                        <li>
-                          <div class="collapsible-header">Web Security</div>
+                        <li class="">
+                          <div class="collapsible-header">
+                            React Native
+                            <div class="collapse-wrapper">
+                              <img class="dropdown-arrow" src="images/arrow.svg" alt="" />
+                            </div>
+                          </div>
                           <div class="collapsible-body">
                             <ul class="collection">
                               <li class="collection-item avatar">
-                                <img src="images/ux-bg.jpg" alt="" class="circle" />
-                                <span class="title">User Experience</span>
-                                <p>1st Semester</p>
-                                <a href="#!" class="secondary-content"> Grade: 10</a>
+                                <img src="images/react-icon.svg" alt="" class="circle" />
+                                <span class="title">React Native</span>
+                                <p>2nd Semester</p>
+                                <a href="#!" class="secondary-content">
+                                  <div class="">Grade: 10 <br />Mark: B</div>
+                                </a>
                               </li>
                             </ul>
                           </div>
                         </li>
-                        <li>
-                          <div class="collapsible-header">Final Bachelor Project</div>
+                        <li class="">
+                          <div class="collapsible-header">
+                            Internship
+                            <div class="collapse-wrapper">
+                              <img class="dropdown-arrow" src="images/arrow.svg" alt="" />
+                            </div>
+                          </div>
                           <div class="collapsible-body">
                             <ul class="collection">
                               <li class="collection-item avatar">
-                                <img src="images/ux-bg.jpg" alt="" class="circle" />
-                                <span class="title">User Experience</span>
-                                <p>1st Semester</p>
-                                <a href="#!" class="secondary-content"> Grade: 10</a>
+                                <img src="images/internship-icon.svg" alt="" class="circle" />
+                                <span class="title">Internship</span>
+                                <p>3rd Semester</p>
+                                <a href="#!" class="secondary-content">
+                                  <div class="">Grade: 12 <br />Mark: A</div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="collapsible-header">
+                            Final Bachelor Project
+                            <div class="collapse-wrapper">
+                              <img class="dropdown-arrow" src="images/arrow.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="collapsible-body">
+                            <ul class="collection">
+                              <li class="collection-item avatar">
+                                <img src="images/bachelor-icon.svg" alt="" class="circle" />
+                                <span class="title">Final Bachelor Project</span>
+                                <p>4th Semester</p>
+                                <a href="#!" class="secondary-content">
+                                  <div class="">Grade: 12 <br />Mark: A</div>
+                                </a>
                               </li>
                             </ul>
                           </div>
                         </li>
                       </ul>
-                      <button class="btn">Download as PDF</button>
+                      <button class="btn download-btn">Download as PDF</button>
                     </div>
                   </div>
                 </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-small error">Close</a>
+                </div>
               </div>
-              <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-small error">Cancel</a>
+            </div>
+            <div class="dash-link web-dev">
+              <h2 class="clamped">Web Development</h2>
+              <p class="link-text">Here you can read about your Web Development course</p>
+              <!-- Modal Trigger -->
+              <a class="waves-effect waves-light btn modal-trigger link-btn" href="#modal3">Read More</a>
+
+              <!-- Modal Structure -->
+              <div id="modal3" class="modal">
+                <div class="modal-content">
+                  <h4>
+                    <span><img src="images/web-dev-icon.svg" alt="" class="circle icon-sm" /></span> Web Development
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque ex consequuntur aut eum ad fuga, inventore quos,
+                    doloribus nam magni aliquid fugit alias id nobis eaque? Iste porro ea neque fugit rem! Minima libero quisquam soluta ut sit
+                    inventore.
+                  </p>
+                  <br />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque ex consequuntur aut eum ad fuga, inventore quos,
+                    doloribus nam magni aliquid fugit alias id nobis eaque? Iste porro ea neque fugit rem! Minima libero quisquam soluta ut sit
+                    inventore.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-small error">Close</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="dash-link web-dev">
-            <h2 class="clamped">Web Development</h2>
+          <div class="col s6">
+            <div class="dash-link ux">
+              <h2 class="clamped">User Experience</h2>
+              <p class="link-text">Here you can read about your User Experience course</p>
+              <!-- Modal Trigger -->
+              <a class="waves-effect waves-light btn modal-trigger link-btn" href="#modal4">Read More</a>
+
+              <!-- Modal Structure -->
+              <div id="modal4" class="modal">
+                <div class="modal-content">
+                  <h4>
+                    <span><img src="images/ux-icon.svg" alt="" class="circle icon-sm" /></span> user Experience
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque ex consequuntur aut eum ad fuga, inventore quos,
+                    doloribus nam magni aliquid fugit alias id nobis eaque? Iste porro ea neque fugit rem! Minima libero quisquam soluta ut sit
+                    inventore.
+                  </p>
+                  <br />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque ex consequuntur aut eum ad fuga, inventore quos,
+                    doloribus nam magni aliquid fugit alias id nobis eaque? Iste porro ea neque fugit rem! Minima libero quisquam soluta ut sit
+                    inventore.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-small error">Close</a>
+                </div>
+              </div>
+            </div>
+            <div class="dash-link databases">
+              <h2 class="clamped">Databases</h2>
+              <p class="link-text">Here you can read about your Databases course</p>
+              <!-- Modal Trigger -->
+              <a class="waves-effect waves-light btn modal-trigger link-btn" href="#modal5">Read more</a>
+
+              <!-- Modal Structure -->
+              <div id="modal5" class="modal">
+                <div class="modal-content">
+                  <h4>
+                    <span><img src="images/database-icon.svg" alt="" class="circle icon-sm" /></span> Databases
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque ex consequuntur aut eum ad fuga, inventore quos,
+                    doloribus nam magni aliquid fugit alias id nobis eaque? Iste porro ea neque fugit rem! Minima libero quisquam soluta ut sit
+                    inventore.
+                  </p>
+                  <br />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque ex consequuntur aut eum ad fuga, inventore quos,
+                    doloribus nam magni aliquid fugit alias id nobis eaque? Iste porro ea neque fugit rem! Minima libero quisquam soluta ut sit
+                    inventore.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-small error">Close</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col s6">
-          <div class="dash-link ux">
-            <h2 class="clamped">User Experience</h2>
+        <div class="col s12 m6 l4 offset-l1">
+          <div class="dash-link assignments">
+            <h2 class="clamped-3">Course Counselor</h2>
+            <div class="contact-wrapper">
+              <img class="icon" src="images/romeo.png" alt="" />
+              <div class="news-box">
+                <h2 class="clamped-2">Romeo Baylee</h2>
+                <p class="email">
+                  <a href="mailto:scb113@froodle.com"
+                    ><span class="material-icons custom">email</span> <span class="email-link"> scb113@froodle.com</span>
+                  </a>
+                </p>
+
+                <ul>
+                  <li></li>
+                  <li>
+                    <ul>
+                      <li>Available Monday, Wednesday &amp; Fridays from 8-12</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="dash-link databases">
-            <h2 class="clamped">Databases</h2>
-          </div>
+
+          <div class="dash-link assignments"></div>
         </div>
       </div>
-      <div class="col s12 m6 l4 offset-l1">
-        <div class="dash-link assignments"></div>
-        <div class="dash-link assignments"></div>
-        <div class="dash-link assignments"></div>
+      <div id="mobile-grades" class="grades-print hide-on-large-only">
+        <div class="container">
+          <ul class="collection with-header">
+            <li class="collection-header"><h4>Your Grades</h4></li>
+            <li class="collection-item">
+              <div>User Experience 1st semester<a href="#!" class="secondary-content">B</a></div>
+            </li>
+            <li class="collection-item">
+              <div>Alvin<a href="#!" class="secondary-content">B</a></div>
+            </li>
+            <li class="collection-item">
+              <div>Alvin<a href="#!" class="secondary-content">B</a></div>
+            </li>
+            <li class="collection-item">
+              <div>Alvin<a href="#!" class="secondary-content">B</a></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -234,6 +426,11 @@
       document.addEventListener("DOMContentLoaded", function () {
         const elems = document.querySelectorAll(".collapsible");
         const instances = M.Collapsible.init(elems);
+      });
+
+      const downloadBtn = document.querySelector(".download-btn");
+      downloadBtn.addEventListener("click", function () {
+        location.href = "print.html";
       });
     </script>
   </body>
