@@ -306,6 +306,11 @@ h4 {
 .assignments .assignment-subjects .assignment-subject h4 {
   font-size: 15px;
 }
+@media only screen and (min-width: 993px) {
+  .assignments .assignment-subjects .assignment-subject {
+    margin-right: 40px;
+  }
+}
 .assignments .assignment-subjects .assignment-subject .assignment-subject-title {
   margin-top: 20px;
 }
