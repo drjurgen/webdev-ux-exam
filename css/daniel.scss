@@ -250,8 +250,8 @@ h1 {
 }
 .link-btn {
   margin-top: 20px;
-
-  background-color: $secondary-green;
+  color: $tertiary-green;
+  background-color: $primary-text;
 }
 .btn-wrapper {
   display: flex;
@@ -296,6 +296,7 @@ h1 {
   flex-direction: column;
   .pw-btn {
     margin: 20px 0;
+    background: $tertiary-green;
   }
 }
 #profile-splash {

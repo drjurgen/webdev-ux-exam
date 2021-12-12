@@ -275,7 +275,8 @@ h1 {
 
 .link-btn {
   margin-top: 20px;
-  background-color: #40916c;
+  color: #2d6a4f;
+  background-color: #fafafa;
 }
 
 .btn-wrapper {
@@ -327,6 +328,7 @@ h1 {
 }
 .user-info .pw-btn {
   margin: 20px 0;
+  background: #2d6a4f;
 }
 
 #profile-splash {
