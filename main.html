@@ -7,7 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/daniel.css" />
-    <title>Froodle - Style tile</title>
+    <title>Froodle - Your Dashboard</title>
   </head>
   <body class="dashboard">
     <section id="navigation">
@@ -27,7 +27,7 @@
 
           <ul id="desktop-nav">
             <li>
-              <a href="#" class="nav-link">Overview</a>
+              <a href="main.html" class="nav-link">Overview</a>
             </li>
             <li>
               <a href="#" class="nav-link">Schedule</a>
@@ -36,7 +36,7 @@
               <a href="#" class="nav-link">Assignments</a>
             </li>
             <li>
-              <a href="#" class="nav-link">
+              <a href="profile.html" class="nav-link">
                 <div class="avatar"></div>
               </a>
             </li>
@@ -45,8 +45,79 @@
       </header>
     </section>
 
-    <div class="container">
-      <div class="row"></div>
+    <div class="special-container">
+      <h1>Latest Updates</h1>
+      <div class="row swap">
+        <div class="col s12 m12 l5">
+          <section class="content-right">
+            <div class="link-wrapper">
+              <article class="dash-link assignments">
+                <h2 class="clamped">Upcoming Assignments</h2>
+                <ul class="assignment-list">
+                  <li>
+                    <div>
+                      <p class="assignment-paragraph">React Project (Web Dev)</p>
+                      <p class="date assignment-paragraph">- Due Wed. January 12th</p>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="assignment-paragraph">UX Project (UX)</p>
+                    <p class="date assignment-paragraph">- Due Wed. January 12th</p>
+                  </li>
+
+                  <a href="#" class="assignment-link">See all Assignments</a>
+                </ul>
+              </article>
+              <article class="dash-link schedule">
+                <h2 class="clamped">Upcoming Classes</h2>
+              </article>
+            </div>
+            <div class="link-wrapper">
+              <article class="dash-link profile">
+                <h2 class="clamped">Upcoming Classes</h2>
+              </article>
+              <article class="dash-link resources">
+                <h2 class="clamped">Upcoming Classes</h2>
+              </article>
+            </div>
+            <div class="content-wrapper">
+              <div class="item-wrapper">
+                <img class="icon" src="images/guy.png" alt="" />
+                <h2>name Lastname</h2>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quis!</p>
+            </div>
+          </section>
+        </div>
+        <div class="col s12 m12 l6">
+          <section class="content-left">
+            <article class="content-wrapper">
+              <div class="item-wrapper">
+                <img class="icon" src="images/admin.png" alt="" />
+                <div class="news-box">
+                  <h2>Garey Michaels</h2>
+                  <p class="timestamp"><time>50 minutes ago</time></p>
+                </div>
+              </div>
+              <p>
+                  <h3>Corona restrictions updated</h3>
+               As per December 10th, all students must presemt a valid Covid-19 test. You can get tested for free by Arturo in his Spanish class in room 101 between 10-12
+              </p>
+              <img class="content-img" src="images/corona.jpg" alt="" />
+            </article>
+            <article class="content-wrapper">
+              <div class="item-wrapper">
+                <img class="icon" src="images/guy.png" alt="" />
+                <h2>name Lastname</h2>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </article>
+          </section>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>

@@ -11,6 +11,7 @@ img {
 $primary-green: #d8f3dc;
 $secondary-green: #40916c;
 $tertiary-green: #2d6a4f;
+$heading-link: #1b4332;
 $warning-color: #eb6d6d;
 $primary-text: #fafafa;
 $primary-border-radius: 15px;
@@ -60,82 +61,235 @@ h2 {
 .logo img {
   margin-bottom: -10px;
 }
-
-.dashboard-container-1,
-.dashboard-container-2,
-.dashboard-container-3 {
-  border-radius: 15px 15px 0 0;
-  border-top: 30px solid $secondary-green;
-  background-color: $primary-green;
-  padding: 0.75rem;
+h1 {
+  margin-left: 80px;
+  margin-bottom: 20px;
+  color: $heading-link;
 }
-.dashboard-container-1 {
-  height: 700px;
+.special-container {
+  max-width: 1600px;
+  margin: 0 auto;
 }
-.dashboard-container-2 {
-  height: 335px;
-  margin-bottom: 30px;
-}
-
-.dashboard-container-3 {
-  height: 335px;
-}
-.divider {
-  box-sizing: none !important;
-  height: 30px;
-  width: 100%;
-  background-color: $secondary-green;
-  padding: 0 !important;
-  margin: 15px 0;
-  // border-right: 11px solid $secondary-green;
-}
-
 .dash-link {
-  background: grey;
-  height: 80px;
+  height: 110px;
   width: 100%;
-  margin: 2px 0;
+  margin: 5px 0;
   border-radius: $primary-border-radius;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px !important;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px !important;
+  overflow: scroll;
 }
 
 .icon {
-  width: 40px;
+  width: 60px;
 }
 .content-wrapper {
   background-color: $primary-green;
   border-radius: $primary-border-radius;
   margin-bottom: 20px;
+  padding: 20px;
+  p {
+    margin-left: 5px;
+  }
 }
 .item-wrapper {
   display: flex;
+  img {
+    margin: 10px;
+  }
+  h2 {
+    margin: 10px 5px;
+  }
 }
-
+.news-box {
+  display: flex;
+  flex-direction: column;
+}
+.link-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.link-wrapper:nth-of-type(2) {
+  margin-bottom: 15px;
+}
+.content-img {
+  margin: 15px 0;
+  border-radius: $primary-border-radius;
+}
 .assignments {
   background-image: url(/images/assignments-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .schedule {
   background-image: url(/images/schedule-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-left: 10px;
+  background-position: center;
 }
 .profile {
   background-image: url(/images/profile-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .resources {
   background-image: url(/images/resources-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-left: 10px;
+  background-position: center;
+}
+
+.all-assignments {
+  background-image: url(/images/all-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+  background-position: center;
+}
+.ux {
+  background-image: url(/images/ux-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+  background-position: center;
+}
+.web-dev {
+  background-image: url(/images/web-dev-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+  background-position: center;
+}
+.databases {
+  background-image: url(/images/databases-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+  background-position: center;
 }
 
 .secondary-nav {
   margin-bottom: 20px;
 }
+.clamped {
+  color: $heading-link;
+  font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  padding: 10px;
+}
+
+.assignment-paragraph {
+  font-size: 0.5rem;
+  margin-left: 10px;
+  color: $tertiary-green;
+}
+.assignment-link {
+  margin-left: 10px;
+}
+.dash-button {
+  height: 20px;
+  font-size: 10px;
+}
+.spacer {
+  margin-top: 100px;
+}
+.profile-container {
+  h2 {
+    margin-left: 5px;
+  }
+}
+.profile-page {
+  background-image: url(/images/profile-header.jpg);
+  background-size: 100% 300px;
+  background-position: top;
+  background-repeat: no-repeat;
+  .dash-link {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .clamped {
+    color: $primary-text;
+  }
+}
+.profile-image {
+  max-width: 130px;
+  position: relative;
+  top: -50px;
+  left: -25px;
+}
+.error {
+  background: $warning-color;
+}
+.error:hover {
+  background: $warning-color;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  .pw-btn {
+    margin: 20px 0;
+  }
+}
+#profile-splash {
+  background-image: url(/images/profile-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+  position: absolute;
+
+  top: 0;
+}
+
+.grades-heading {
+  color: $tertiary-green;
+  margin-bottom: 10px;
+}
+.collapse-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: flex-end;
+  img {
+    width: 30px;
+    height: 15px;
+  }
+  li.active img {
+    transform: rotate(90deg);
+  }
+}
 @media only screen and (min-width: 600px) {
   .dash-link {
-    height: 10rem;
+    height: 200px;
+  }
+  .swap {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .assignment-paragraph {
+    font-size: 1rem;
+  }
+  #profile-splash {
+    height: 250px;
+  }
+  .profile-container {
+    max-width: none;
+    display: flex;
+  }
+  .desktop-transform {
+    position: relative;
+    left: 0;
+    top: -100px;
+  }
+  .profile-image {
+    max-width: 200px;
+    height: 100%;
+    position: relative;
+    top: -50px;
+    left: -40px;
   }
 }
