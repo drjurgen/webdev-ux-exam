@@ -66,6 +66,11 @@ h1 {
   margin-bottom: 20px;
   color: $heading-link;
 }
+.custom {
+  color: $tertiary-green;
+  transform: translateY(7px);
+  margin-top: -5px;
+}
 .special-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -82,6 +87,36 @@ h1 {
 
 .icon {
   width: 60px;
+  height: 60px;
+}
+.icon-xs {
+  width: 10px;
+}
+.icon-sm {
+  width: 30px;
+  transform: translateY(7px);
+}
+.icon-med {
+  width: 45px;
+}
+.icon-span {
+  margin-top: -5px;
+}
+
+.user-wrapper {
+  display: flex;
+  margin-left: 10px;
+  h2 {
+    margin-left: 10px;
+  }
+}
+
+.contact-wrapper {
+  display: flex;
+
+  img {
+    margin: 0 15px;
+  }
 }
 .content-wrapper {
   background-color: $primary-green;
@@ -179,7 +214,22 @@ h1 {
 .clamped {
   color: $heading-link;
   font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+}
+.clamped-2 {
+  font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  color: $heading-link;
+}
+.clamped-3 {
+  font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  color: $secondary-green;
   padding: 10px;
+  text-align: center;
+}
+.email {
+  color: $heading-link;
+  .email-link {
+    margin-bottom: -5px;
+  }
 }
 
 .assignment-paragraph {
@@ -194,8 +244,21 @@ h1 {
   height: 20px;
   font-size: 10px;
 }
+.link-text {
+  color: $primary-text;
+  margin-left: 10px;
+}
+.link-btn {
+  margin-top: 20px;
+  color: $tertiary-green;
+  background-color: $primary-text;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
 .spacer {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 .profile-container {
   h2 {
@@ -213,6 +276,7 @@ h1 {
   }
   .clamped {
     color: $primary-text;
+    padding: 10px;
   }
 }
 .profile-image {
@@ -232,6 +296,7 @@ h1 {
   flex-direction: column;
   .pw-btn {
     margin: 20px 0;
+    background: $tertiary-green;
   }
 }
 #profile-splash {
@@ -252,14 +317,38 @@ h1 {
 .collapse-wrapper {
   display: flex;
   width: 100%;
-  margin-top: 10px;
+  margin: 10px 15px 0 0;
+
   justify-content: flex-end;
   img {
     width: 30px;
     height: 15px;
   }
-  li.active img {
-    transform: rotate(90deg);
+}
+.active .dropdown-arrow {
+  animation-name: rotateit;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: 0.5s;
+}
+li:not(.active) .dropdown-arrow {
+  animation-name: rotateback;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: 0.5s;
+}
+@keyframes rotateback {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+  }
+}
+@keyframes rotateit {
+  0% {
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }
 @media only screen and (min-width: 600px) {
@@ -279,6 +368,7 @@ h1 {
   .profile-container {
     max-width: none;
     display: flex;
+    height: 200px;
   }
   .desktop-transform {
     position: relative;
@@ -287,7 +377,7 @@ h1 {
   }
   .profile-image {
     max-width: 200px;
-    height: 100%;
+    height: 190px;
     position: relative;
     top: -50px;
     left: -40px;
