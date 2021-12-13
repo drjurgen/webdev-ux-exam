@@ -1,711 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="css/tylle.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/daniel.css" />
     <script src="js/materialize.min.js" defer></script>
-
     <script src="js/schedule-tabs.js" defer></script>
+    <script src="js/global.js" defer></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body class="schedule row">
+  <body class="schedule">
     <section id="navigation">
-        <header>
-            <nav class="row">
-                <a href="#" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1 ">
-                    <div class="logo-wrapper">
-                        <img src="images/logo.svg">
-                    </div>
-                </a>
+      <header>
+        <nav class="">
+          <a href="#" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1">
+            <div class="logo-wrapper">
+              <img src="images/logo.svg" />
+            </div>
+          </a>
 
-                <ul id="mobile-nav" class="col offset-s8">
-                    <li>
-                        <div class="burgermenu-icon">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                    </li>
-                </ul>
-
-                <ul id="desktop-nav" class="col offset-l4 offset-m3">
-                    <li>
-                        <a href="#" class="nav-link">Overview</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">Assignments</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <div class="avatar"></div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+          <ul id="mobile-nav" class="col offset-s8">
+            <li>
+              <div class="burgermenu-icon sidenav-trigger" data-target="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </li>
+          </ul>
+          <ul class="sidenav" id="mobile-menu">
+            <li><a href="main.html">Overview</a></li>
+            <li><a class="active" href="schedule.html">Schedule</a></li>
+            <li><a href="assignments.html">Assigments</a></li>
+            <li><a href="profile.html">Your Profile</a></li>
+          </ul>
+          <ul id="desktop-nav" class="col offset-l4 offset-m3">
+            <li>
+              <a href="main.html" class="nav-link">Overview</a>
+            </li>
+            <li>
+              <a href="schedule.html" class="nav-link">Schedule</a>
+            </li>
+            <li>
+              <a href="assignments.html" class="nav-link">Assignments</a>
+            </li>
+            <li>
+              <a href="profile.html" class="nav-link">
+                <div class="avatar"><img src="images/sharron.png" alt="" /></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </section>
-    <h2 class="schedule-title">Schedule</h2>
-    <ul id="tabs-swipe-demo" class="tabs weekdays">
-        <li class="tab col s3"><a class="active" href="#monday-tab">
-                Mon
-                <br>24
-            </a></li>
+    <div class="row">
+      <h2 class="schedule-title">Schedule</h2>
+      <ul id="tabs-swipe-demo" class="tabs weekdays">
+        <li class="tab col s3">
+          <a class="active" href="#monday-tab">
+            Mon
+            <br />24
+          </a>
+        </li>
         <li class="tab col s3"><a href="#tuesday-tab">Tues</a></li>
         <li class="tab col s3"><a href="#wednesday-tab">Wed</a></li>
         <li class="tab col s3"><a href="#thursday-tab">Thur</a></li>
         <li class="tab col s3"><a href="#friday-tab">Fri</a></li>
-    </ul>
-    <ul class="schedule-dates-nav row">
-        <li class="col offset-l1 offset-m1 l2 schedule-date-nav ">
-            <p>M</p>
-            <h4>23</h4>
+      </ul>
+      <ul class="schedule-dates-nav row">
+        <li class="col offset-l1 offset-m1 l2 schedule-date-nav">
+          <p>M</p>
+          <h4>23</h4>
         </li>
         <li class="col m2 l2 schedule-date-nav">
-            <div>
-                <p>T</p>
-                <h4>24</h4>
-            </div>
-        </li>
-        <li class="col m2 l2 schedule-date-nav">
-            <p>O</p>
-            <h4>25</h4>
-        </li>
-        <li class="col m2 l2 schedule-date-nav">
+          <div>
             <p>T</p>
-            <h4>26</h4>
+            <h4>24</h4>
+          </div>
         </li>
         <li class="col m2 l2 schedule-date-nav">
-            <p>F</p>
-            <h4>27</h4>
+          <p>W</p>
+          <h4>25</h4>
         </li>
-    </ul>
-    </ul>
-    <div id="monday-tab" class="row col s12 m12 l3">
+        <li class="col m2 l2 schedule-date-nav">
+          <p>T</p>
+          <h4>26</h4>
+        </li>
+        <li class="col m2 l2 schedule-date-nav">
+          <p>F</p>
+          <h4>27</h4>
+        </li>
+      </ul>
+
+      <div id="monday-tab" class="row col s12 m12 l3">
         <section class="schedule-date col s12 row">
+          <div class="col date-wrapper">
+            <h3>23</h3>
+            <p>Nov</p>
+          </div>
+        </section>
+        <section class="schedule-hour col s12 row m12 l12">
+          <div class="schedule-time schedule-main-time col s1 m1 l4">
+            <div class="hour-time">
+              <p class="hour-time-first">08:00</p>
+              <p>09:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">09:00</p>
+              <p>10:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">10:00</p>
+              <p>11:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">11:00</p>
+              <p>12:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">12:00</p>
+              <p>13:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">13:00</p>
+              <p>14:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">14:00</p>
+              <p>15:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">15:00</p>
+              <p>16:00</p>
+            </div>
+          </div>
+
+          <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>User experience</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">08:00 - 09:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 202</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>User experience</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">09:00 - 10:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 202</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>User experience</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">10:00 - 11:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 202</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>User experience</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">11:00 - 12:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 202</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 row cancelled-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>User experience</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">12:00 - 13:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 202</p>
+            </div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 row active-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">13:00 - 14:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 205</p>
+            </div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 row active-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">14:00 - 15:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 205</p>
+            </div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 row active-hour m9 l8">
+            <div class="hour-field-subject col s9">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">15:00 - 16:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 205</p>
+            </div>
+          </div>
+          <section class="schedule-date schedule-assignments col s12 row">
             <div class="col date-wrapper">
-                <h3>23</h3>
-                <p>Nov</p>
+              <p>Appointments</p>
             </div>
 
+            <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">15:00 - 16:00</p>
+            </div>
+          </section>
         </section>
-        <section class="schedule-hour col s12 row m12 l12 ">
-            <div class="schedule-time schedule-main-time col s1 m1 l4">
-                <div class="hour-time">
-                    <p class="hour-time-first">08:00</p>
-                    <p>09:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">09:00</p>
-                    <p>10:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">10:00</p>
-                    <p>11:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">11:00</p>
-                    <p>12:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">12:00</p>
-                    <p>13:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">13:00</p>
-                    <p>14:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">14:00</p>
-                    <p>15:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">15:00</p>
-                    <p>16:00</p>
-                </div>
-            </div>
-
-            <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
-                <div class="hour-field-subject col s9">
-                    <h4>User experience</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">08:00 - 09:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 202</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
-                <div class="hour-field-subject col s9">
-                    <h4>User experience</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">09:00 - 10:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 202</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
-                <div class="hour-field-subject col s9 m9 l12 ">
-                    <h4>User experience</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">10:00 - 11:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 202</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 row active-hour m9 l8">
-                <div class="hour-field-subject col s9">
-                    <h4>User experience</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">11:00 - 12:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 202</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 row cancelled-hour m9 l8">
-                <div class="hour-field-subject col s9">
-                    <h4>User experience</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">12:00 - 13:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 202</p>
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 row active-hour m9 l8">
-                <div class="hour-field-subject col s9">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">13:00 - 14:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 205</p>
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 row active-hour m9 l8">
-                <div class="hour-field-subject col s9">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">14:00 - 15:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 205</p>
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 row active-hour m9 l8">
-                <div class="hour-field-subject col s9">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">15:00 - 16:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 205</p>
-                </div>
-            </div>
-            <section class="schedule-date schedule-assignments col s12 row">
-                <div class="col date-wrapper">
-                    <p>Assignments</p>
-                </div>
-
-                <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">15:00 - 16:00</p>
-                </div>
-            </section>
-        </section>
-
-    </div>
-    <div id="tuesday-tab" class="row col s12 m12 l2">
+      </div>
+      <div id="tuesday-tab" class="row col s12 m12 l2">
         <section class="schedule-date col s12 row">
+          <div class="col date-wrapper">
+            <h3>24</h3>
+            <p>Nov</p>
+          </div>
+        </section>
+        <section class="schedule-hour col s12 row">
+          <div class="schedule-time col s1">
+            <div class="hour-time">
+              <p class="hour-time-first">08:00</p>
+              <p>09:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">09:00</p>
+              <p>10:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">10:00</p>
+              <p>11:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">11:00</p>
+              <p>12:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">12:00</p>
+              <p>13:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">13:00</p>
+              <p>14:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">14:00</p>
+              <p>15:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">15:00</p>
+              <p>16:00</p>
+            </div>
+          </div>
+
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Web dev</h4>
+              <p>Santiago Donoso</p>
+              <p class="hour-field-subject-time">12:00 - 13:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 404</p>
+            </div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Web dev</h4>
+              <p>Santiago Donoso</p>
+              <p class="hour-field-subject-time">13:00 - 14:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 404</p>
+            </div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Web dev</h4>
+              <p>Santiago Donoso</p>
+              <p class="hour-field-subject-time">14:00 - 15:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 404</p>
+            </div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Web dev</h4>
+              <p>Santiago Donoso</p>
+              <p class="hour-field-subject-time">15:00 - 16:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 404</p>
+            </div>
+          </div>
+          <section class="schedule-date schedule-assignments col s12 row">
             <div class="col date-wrapper">
-                <h3>24</h3>
-                <p>Nov</p>
+              <p>Assignments</p>
             </div>
 
+            <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">15:00 - 16:00</p>
+            </div>
+          </section>
         </section>
-        <section class="schedule-hour col s12 row ">
-            <div class="schedule-time col s1">
-                <div class="hour-time">
-                    <p class="hour-time-first">08:00</p>
-                    <p>09:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">09:00</p>
-                    <p>10:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">10:00</p>
-                    <p>11:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">11:00</p>
-                    <p>12:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">12:00</p>
-                    <p>13:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">13:00</p>
-                    <p>14:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">14:00</p>
-                    <p>15:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">15:00</p>
-                    <p>16:00</p>
-                </div>
-            </div>
-
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9  m9 l12 row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Web dev</h4>
-                    <p>Santiago Donoso</p>
-                    <p class="hour-field-subject-time">12:00 - 13:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 404</p>
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Web dev</h4>
-                    <p>Santiago Donoso</p>
-                    <p class="hour-field-subject-time">13:00 - 14:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 404</p>
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9  m9 l12 row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Web dev</h4>
-                    <p>Santiago Donoso</p>
-                    <p class="hour-field-subject-time">14:00 - 15:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 404</p>
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Web dev</h4>
-                    <p>Santiago Donoso</p>
-                    <p class="hour-field-subject-time">15:00 - 16:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 404</p>
-                </div>
-            </div>
-            <section class="schedule-date schedule-assignments col s12 row">
-                <div class="col date-wrapper">
-                    <p>Assignments</p>
-                </div>
-
-                <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">15:00 - 16:00</p>
-                </div>
-            </section>
-        </section>
-    </div>
-    <div id="wednesday-tab" class="row col s12 m12 l2 ">
+      </div>
+      <div id="wednesday-tab" class="row col s12 m12 l2">
         <section class="schedule-date col s12 row">
+          <div class="col date-wrapper">
+            <h3>25</h3>
+            <p>Nov</p>
+          </div>
+        </section>
+        <section class="schedule-hour col s12 row">
+          <div class="schedule-time col s1">
+            <div class="hour-time">
+              <p class="hour-time-first">08:00</p>
+              <p>09:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">09:00</p>
+              <p>10:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">10:00</p>
+              <p>11:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">11:00</p>
+              <p>12:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">12:00</p>
+              <p>13:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">13:00</p>
+              <p>14:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">14:00</p>
+              <p>15:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">15:00</p>
+              <p>16:00</p>
+            </div>
+          </div>
+
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <section class="schedule-date schedule-assignments col s12 row">
             <div class="col date-wrapper">
-                <h3>25</h3>
-                <p>Nov</p>
+              <p>Assignments</p>
             </div>
 
+            <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">15:00 - 16:00</p>
+            </div>
+          </section>
         </section>
-        <section class="schedule-hour col s12 row ">
-            <div class="schedule-time col s1">
-                <div class="hour-time">
-                    <p class="hour-time-first">08:00</p>
-                    <p>09:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">09:00</p>
-                    <p>10:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">10:00</p>
-                    <p>11:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">11:00</p>
-                    <p>12:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">12:00</p>
-                    <p>13:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">13:00</p>
-                    <p>14:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">14:00</p>
-                    <p>15:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">15:00</p>
-                    <p>16:00</p>
-                </div>
-            </div>
-
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9  m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <section class="schedule-date schedule-assignments col s12 row">
-                <div class="col date-wrapper">
-                    <p>Assignments</p>
-                </div>
-
-                <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">15:00 - 16:00</p>
-                </div>
-            </section>
-        </section>
-
-    </div>
-    <div id="thursday-tab" class="row col s12 m12 l2 ">
+      </div>
+      <div id="thursday-tab" class="row col s12 m12 l2">
         <section class="schedule-date col s12 row">
+          <div class="col date-wrapper">
+            <h3>26</h3>
+            <p>Nov</p>
+          </div>
+        </section>
+        <section class="schedule-hour col s12 row">
+          <div class="schedule-time col s1">
+            <div class="hour-time">
+              <p class="hour-time-first">08:00</p>
+              <p>09:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">09:00</p>
+              <p>10:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">10:00</p>
+              <p>11:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">11:00</p>
+              <p>12:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">12:00</p>
+              <p>13:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">13:00</p>
+              <p>14:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">14:00</p>
+              <p>15:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">15:00</p>
+              <p>16:00</p>
+            </div>
+          </div>
+
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <section class="schedule-date schedule-assignments col s12 row">
             <div class="col date-wrapper">
-                <h3>26</h3>
-                <p>Nov</p>
+              <p>Assignments</p>
             </div>
 
+            <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">15:00 - 16:00</p>
+            </div>
+          </section>
         </section>
-        <section class="schedule-hour col s12 row ">
-            <div class="schedule-time col s1">
-                <div class="hour-time">
-                    <p class="hour-time-first">08:00</p>
-                    <p>09:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">09:00</p>
-                    <p>10:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">10:00</p>
-                    <p>11:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">11:00</p>
-                    <p>12:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">12:00</p>
-                    <p>13:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">13:00</p>
-                    <p>14:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">14:00</p>
-                    <p>15:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">15:00</p>
-                    <p>16:00</p>
-                </div>
-            </div>
-
-            <div class="hour-field col offset-s1 offset-m1 s9  m9 l12 row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9  m9 l12 row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9  m9 l12 row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9  m9 l12 row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <section class="schedule-date schedule-assignments col s12 row">
-                <div class="col date-wrapper">
-                    <p>Assignments</p>
-                </div>
-
-                <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">15:00 - 16:00</p>
-                </div>
-            </section>
-        </section>
-
-    </div>
-    <div id="friday-tab" class="row col s12 m12 l2 ">
+      </div>
+      <div id="friday-tab" class="row col s12 m12 l2">
         <section class="schedule-date col s12 row">
+          <div class="col date-wrapper">
+            <h3>27</h3>
+            <p>Nov</p>
+          </div>
+        </section>
+        <section class="schedule-hour col s12 row">
+          <div class="schedule-time col s1">
+            <div class="hour-time">
+              <p class="hour-time-first">08:00</p>
+              <p>09:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">09:00</p>
+              <p>10:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">10:00</p>
+              <p>11:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">11:00</p>
+              <p>12:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">12:00</p>
+              <p>13:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">13:00</p>
+              <p>14:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">14:00</p>
+              <p>15:00</p>
+            </div>
+            <div class="hour-time">
+              <p class="hour-time-first">15:00</p>
+              <p>16:00</p>
+            </div>
+          </div>
+
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Intro to spanish</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">08:00 - 09:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 101</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Intro to spanish</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">09:00 - 10:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 101</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Intro to spanish</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">10:00 - 11:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 101</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row active-hour">
+            <div class="hour-field-subject col s9">
+              <h4>Intro to spanish</h4>
+              <p>Arturo Mora Rioja</p>
+              <p class="hour-field-subject-time">11:00 - 12:00</p>
+            </div>
+            <div class="hour-field-room col s2">
+              <p>Room: 101</p>
+            </div>
+          </div>
+          <div class="hour-field col offset-s1 offset-m1 s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <div class="hour-field offset-s1 offset-m1 col s9 m9 l12 row inactive-hour">
+            <div class="hour-field-subject col s9"></div>
+            <div class="hour-field-room col s2"></div>
+          </div>
+          <section class="schedule-date schedule-assignments col s12 row">
             <div class="col date-wrapper">
-                <h3>27</h3>
-                <p>Nov</p>
+              <p>Assignments</p>
             </div>
 
+            <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
+              <h4>Databases</h4>
+              <p>Dr. Steven Albury</p>
+              <p class="hour-field-subject-time">15:00 - 16:00</p>
+            </div>
+          </section>
         </section>
-        <section class="schedule-hour col s12 row ">
-            <div class="schedule-time col s1">
-                <div class="hour-time">
-                    <p class="hour-time-first">08:00</p>
-                    <p>09:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">09:00</p>
-                    <p>10:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">10:00</p>
-                    <p>11:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">11:00</p>
-                    <p>12:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">12:00</p>
-                    <p>13:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">13:00</p>
-                    <p>14:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">14:00</p>
-                    <p>15:00</p>
-                </div>
-                <div class="hour-time">
-                    <p class="hour-time-first">15:00</p>
-                    <p>16:00</p>
-                </div>
-            </div>
-
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Intro to spanish</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">08:00 - 09:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 101</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Intro to spanish</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">09:00 - 10:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 101</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Intro to spanish</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">10:00 - 11:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 101</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row active-hour">
-                <div class="hour-field-subject col s9">
-                    <h4>Intro to spanish</h4>
-                    <p>Arturo Mora Rioja</p>
-                    <p class="hour-field-subject-time">11:00 - 12:00</p>
-                </div>
-                <div class="hour-field-room col s2">
-                    <p>Room: 101</p>
-                </div>
-            </div>
-            <div class="hour-field col offset-s1 offset-m1 s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9  m9 l12 row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <div class="hour-field offset-s1 offset-m1 col s9 m9 l12  row inactive-hour">
-                <div class="hour-field-subject col s9">
-
-                </div>
-                <div class="hour-field-room col s2">
-                </div>
-            </div>
-            <section class="schedule-date schedule-assignments col s12 row">
-                <div class="col date-wrapper">
-                    <p>Assignments</p>
-                </div>
-
-                <div class="hour-field offset-s2 offset-m2 col s9 row assignment-text m9 l8">
-                    <h4>Databases</h4>
-                    <p>Dr. Steven Albury</p>
-                    <p class="hour-field-subject-time">15:00 - 16:00</p>
-                </div>
-            </section>
-        </section>
+      </div>
     </div>
-</body>
-
-
+  </body>
 </html>

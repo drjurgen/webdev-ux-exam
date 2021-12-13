@@ -70,6 +70,20 @@ nav h1 {
 }
 nav .burgermenu-icon {
   cursor: pointer;
+  margin-bottom: -23px;
+}
+nav .sidenav {
+  background: #40916c;
+}
+nav .sidenav a {
+  color: #fafafa;
+}
+nav .sidenav li:first-child {
+  margin-top: 10px;
+}
+nav .sidenav li a.current {
+  font-weight: bold;
+  text-decoration: underline;
 }
 nav .burgermenu-icon .bar {
   width: 24px;
@@ -106,8 +120,10 @@ nav .logo-wrapper {
 }
 nav .logo-wrapper img {
   width: unset;
-  max-height: 95%;
+  height: 60px;
+  max-height: 100%;
   z-index: 2;
+  margin-top: -10px;
 }
 
 footer {

@@ -19,7 +19,7 @@ h4 {
   .schedule-title {
     width: 100%;
     text-align: center;
-    color: $primary-text;
+    color: $tertiary-green;
     background-color: $secondary-green;
     padding: 5px 0;
     font-size: 20px;
@@ -87,25 +87,13 @@ h4 {
   }
   .assignment-subjects {
     .subject-ux {
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(164, 95, 190, 0.7) 67.71%
-      );
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(164, 95, 190, 0.7) 67.71%);
     }
     .subject-wd {
-      background: linear-gradient(
-        180deg,
-        rgba(216, 243, 220, 0) 0%,
-        #4b81ab 78.12%
-      );
+      background: linear-gradient(180deg, rgba(216, 243, 220, 0) 0%, #4b81ab 78.12%);
     }
     .subject-db {
-      background: linear-gradient(
-        180deg,
-        rgba(64, 145, 108, 0) 0%,
-        #40916c 95.83%
-      );
+      background: linear-gradient(180deg, rgba(64, 145, 108, 0) 0%, #40916c 95.83%);
     }
     .assignment-subject {
       border-radius: $primary-border-radius;

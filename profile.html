@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script src="js/global.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/daniel.css" />
     <title>Froodle - Profile</title>
@@ -13,38 +15,48 @@
   <body class="profile-page">
     <section id="navigation">
       <header>
-        <nav>
-          <a href="#" class="nav-logo nav-logo-link"><img src="images/logo.svg" alt="" /></a>
+        <nav class="">
+          <a href="#" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1">
+            <div class="logo-wrapper">
+              <img src="images/logo.svg" />
+            </div>
+          </a>
 
-          <ul id="mobile-nav">
+          <ul id="mobile-nav" class="col offset-s8">
             <li>
-              <div class="burgermenu-icon">
+              <div class="burgermenu-icon sidenav-trigger" data-target="mobile-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
               </div>
             </li>
           </ul>
-
-          <ul id="desktop-nav">
+          <ul class="sidenav" id="mobile-menu">
+            <li><a href="main.html">Overview</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a class="current" href="assignments.html">Assigments</a></li>
+            <li><a href="profile.html">Your Profile</a></li>
+          </ul>
+          <ul id="desktop-nav" class="col offset-l4 offset-m3">
             <li>
               <a href="main.html" class="nav-link">Overview</a>
             </li>
             <li>
-              <a href="#" class="nav-link">Schedule</a>
+              <a href="schedule.html" class="nav-link">Schedule</a>
             </li>
             <li>
-              <a href="#" class="nav-link">Assignments</a>
+              <a href="assignments.html" class="nav-link current">Assignments</a>
             </li>
             <li>
-              <a href="#" class="nav-link">
-                <div class="avatar"><img src="images/sharron.png" alt="" /></div>
+              <a href="profile.html" class="nav-link">
+                <div class="avatar"><img src="images/sharron-stroke.png" alt="" /></div>
               </a>
             </li>
           </ul>
         </nav>
       </header>
     </section>
+
     <div class="special-container">
       <div class="row">
         <div class="spacer"></div>
@@ -369,7 +381,7 @@
           </div>
         </div>
         <div class="col s12 m6 l4 offset-l1">
-          <div class="dash-link assignments">
+          <div class="dash-link assignments-course">
             <h2 class="clamped-3">Course Counselor</h2>
             <div class="contact-wrapper">
               <img class="icon" src="images/romeo.png" alt="" />

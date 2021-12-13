@@ -14,6 +14,7 @@ $tertiary-green: #2d6a4f;
 $heading-link: #1b4332;
 $warning-color: #eb6d6d;
 $primary-text: #fafafa;
+$secondary-text: #000000;
 $primary-border-radius: 15px;
 
 footer {
@@ -31,21 +32,42 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  .login-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 150px;
+    }
+  }
 }
 
 .login-left {
-  height: 500px;
   background: $primary-green;
-  border-radius: 15px 0 0 15px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: $primary-border-radius;
+  .btn {
+    margin: 10px;
+    border-radius: $primary-border-radius;
+  }
+  .student-btn {
+    background: $tertiary-green;
+  }
+  .teacher-btn {
+    background: $heading-link;
+  }
 }
 .login-right {
-  height: 500px;
   background: $secondary-green;
-  border-radius: 0 15px 15px 0;
+  border-radius: $primary-border-radius;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
 }
 
 h2 {
@@ -118,6 +140,10 @@ h1 {
     margin: 0 15px;
   }
 }
+.content-right {
+  position: sticky !important;
+  top: 60px;
+}
 .content-wrapper {
   background-color: $primary-green;
   border-radius: $primary-border-radius;
@@ -152,13 +178,13 @@ h1 {
   margin: 15px 0;
   border-radius: $primary-border-radius;
 }
-.assignments {
+.assignments-course {
   background-image: url(/images/assignments-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.schedule {
+.schedule-bg {
   background-image: url(/images/schedule-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -207,13 +233,16 @@ h1 {
   margin-left: 10px;
   background-position: center;
 }
-
+.modal-paragraph {
+  color: $secondary-text;
+}
 .secondary-nav {
   margin-bottom: 20px;
 }
 .clamped {
   color: $heading-link;
   font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  padding: 10px;
 }
 .clamped-2 {
   font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
@@ -224,6 +253,9 @@ h1 {
   color: $secondary-green;
   padding: 10px;
   text-align: center;
+}
+.subjects {
+  margin-left: 80px;
 }
 .email {
   color: $heading-link;
@@ -287,7 +319,9 @@ h1 {
 }
 .error {
   background: $warning-color;
+  color: $primary-text;
 }
+
 .error:hover {
   background: $warning-color;
 }
@@ -381,5 +415,19 @@ li:not(.active) .dropdown-arrow {
     position: relative;
     top: -50px;
     left: -40px;
+  }
+  .login-left {
+    height: 500px;
+    border-radius: 15px 0 0 15px;
+  }
+  .login-right {
+    height: 500px;
+    border-radius: 0 15px 15px 0;
+  }
+  .intro-paragraph {
+    margin-top: 40px;
+  }
+  .intro-header {
+    font-size: 3rem;
   }
 }

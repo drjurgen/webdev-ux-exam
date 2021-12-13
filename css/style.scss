@@ -60,6 +60,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   @media only screen and (min-width: 600px) {
     padding: 24px 32px;
   }
@@ -74,8 +75,21 @@ nav {
 
   .burgermenu-icon {
     cursor: pointer;
+    margin-bottom: -23px;
   }
-
+  .sidenav {
+    background: $secondary-green;
+    a {
+      color: $primary-text;
+    }
+    li:first-child {
+      margin-top: 10px;
+    }
+    li a.current {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
   .burgermenu-icon .bar {
     width: 24px;
     height: 2px;
@@ -116,8 +130,10 @@ nav {
     display: flex;
     img {
       width: unset;
-      max-height: 95%;
+      height: 60px;
+      max-height: 100%;
       z-index: 2;
+      margin-top: -10px;
     }
   }
 }

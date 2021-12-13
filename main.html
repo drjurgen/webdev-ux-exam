@@ -5,35 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/daniel.css" />
+    <script src="js/global.js" defer></script>
     <title>Froodle - Your Dashboard</title>
   </head>
   <body class="dashboard">
     <section id="navigation">
       <header>
-        <nav>
-          <a href="#" class="nav-logo nav-logo-link"><img src="images/logo.svg" alt="" /></a>
+        <nav class="">
+          <a href="#" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1">
+            <div class="logo-wrapper">
+              <img src="images/logo.svg" />
+            </div>
+          </a>
 
-          <ul id="mobile-nav">
+          <ul id="mobile-nav" class="col offset-s8">
             <li>
-              <div class="burgermenu-icon">
+              <div class="burgermenu-icon sidenav-trigger" data-target="mobile-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
               </div>
             </li>
           </ul>
-
-          <ul id="desktop-nav">
+          <ul class="sidenav" id="mobile-menu">
+            <li><a href="main.html">Overview</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="assignments.html">Assigments</a></li>
+            <li><a href="profile.html">Your Profile</a></li>
+          </ul>
+          <ul id="desktop-nav" class="col offset-l4 offset-m3">
             <li>
               <a href="main.html" class="nav-link">Overview</a>
             </li>
             <li>
-              <a href="#" class="nav-link">Schedule</a>
+              <a href="schedule.html" class="nav-link">Schedule</a>
             </li>
             <li>
-              <a href="#" class="nav-link">Assignments</a>
+              <a href="assignments.html" class="nav-link">Assignments</a>
             </li>
             <li>
               <a href="profile.html" class="nav-link">
@@ -51,7 +62,7 @@
         <div class="col s12 m12 l5">
           <section class="content-right">
             <div class="link-wrapper">
-              <article class="dash-link assignments">
+              <article class="dash-link assignments-course">
                 <h2 class="clamped">Upcoming Assignments</h2>
                 <ul class="assignment-list">
                   <li>
@@ -65,10 +76,10 @@
                     <p class="date assignment-paragraph">- Due Wed. January 12th</p>
                   </li>
 
-                  <a href="#" class="assignment-link">See all Assignments</a>
+                  <a href="assignments.html" class="assignment-link">See all Assignments</a>
                 </ul>
               </article>
-              <article class="dash-link schedule">
+              <article class="dash-link schedule-bg">
                 <h2 class="clamped">Upcoming Classes</h2>
               </article>
             </div>
@@ -80,13 +91,7 @@
                 <h2 class="clamped">Upcoming Classes</h2>
               </article>
             </div>
-            <div class="content-wrapper">
-              <div class="item-wrapper">
-                <img class="icon" src="images/guy.png" alt="" />
-                <h2>name Lastname</h2>
-              </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quis!</p>
-            </div>
+        
           </section>
         </div>
         <div class="col s12 m12 l6">

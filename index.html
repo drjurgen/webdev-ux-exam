@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="css/daniel.css" />
     <title>Froodle - Welcome</title>
   </head>
   <body class="login">
     <div class="container">
-      <div class="logo"><img src="images/logo.svg" alt="" /></div>
+      <div class="login-logo"><img src="images/logo.svg" alt="" /></div>
       <div class="row">
-        <div class="col s12 m12 l5 offset-l1 login-left">
+        <div class="col s12 m5 l5 offset-m1 offset-l1 login-left">
           <div class="input-field">
             <input id="email" type="email" class="validate" />
             <label for="email">Email</label>
@@ -21,13 +22,21 @@
             <input id="password" type="password" class="validate" />
             <label for="password">Password</label>
           </div>
-          <div class="btn-wrapper center">
-            <div class="btn">Sign In</div>
+          <div class="btn-wrapper">
+            <a href="main.html">
+              <div class="btn student-btn">Student</div>
+            </a>
+            <a href="main-teacher.html">
+              <div class="btn teacher-btn">Teacher</div>
+            </a>
           </div>
         </div>
-        <div class="col s12 m12 l5 login-right welcome">
-          <h2 class="center">welcome</h2>
-          <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nostrum enim magni iste tempora tempore?</p>
+        <div class="col s12 m5 l5 login-right welcome">
+          <h2 class="intro-header">Welcome to Froodle &trade;</h2>
+
+          <p class="intro-paragraph">
+            Here you can see your schedule, assignments and who to contact for help. Sign in as either a student or a teacher
+          </p>
         </div>
       </div>
     </div>

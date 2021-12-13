@@ -26,21 +26,42 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.login .login-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.login .login-logo img {
+  width: 150px;
+}
 
 .login-left {
-  height: 500px;
   background: #d8f3dc;
-  border-radius: 15px 0 0 15px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+}
+.login-left .btn {
+  margin: 10px;
+  border-radius: 15px;
+}
+.login-left .student-btn {
+  background: #2d6a4f;
+}
+.login-left .teacher-btn {
+  background: #1b4332;
 }
 
 .login-right {
-  height: 500px;
   background: #40916c;
-  border-radius: 0 15px 15px 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
 }
 
 h2 {
@@ -123,6 +144,11 @@ h1 {
   margin: 0 15px;
 }
 
+.content-right {
+  position: sticky !important;
+  top: 60px;
+}
+
 .content-wrapper {
   background-color: #d8f3dc;
   border-radius: 15px;
@@ -163,14 +189,14 @@ h1 {
   border-radius: 15px;
 }
 
-.assignments {
+.assignments-course {
   background-image: url(/images/assignments-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.schedule {
+.schedule-bg {
   background-image: url(/images/schedule-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -225,6 +251,10 @@ h1 {
   background-position: center;
 }
 
+.modal-paragraph {
+  color: #000000;
+}
+
 .secondary-nav {
   margin-bottom: 20px;
 }
@@ -232,6 +262,7 @@ h1 {
 .clamped {
   color: #1b4332;
   font-size: clamp(0.5rem, -0.875rem + 6.333vw, 1.5rem);
+  padding: 10px;
 }
 
 .clamped-2 {
@@ -244,6 +275,10 @@ h1 {
   color: #40916c;
   padding: 10px;
   text-align: center;
+}
+
+.subjects {
+  margin-left: 80px;
 }
 
 .email {
@@ -316,6 +351,7 @@ h1 {
 
 .error {
   background: #eb6d6d;
+  color: #fafafa;
 }
 
 .error:hover {
@@ -417,6 +453,24 @@ li:not(.active) .dropdown-arrow {
     position: relative;
     top: -50px;
     left: -40px;
+  }
+
+  .login-left {
+    height: 500px;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .login-right {
+    height: 500px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .intro-paragraph {
+    margin-top: 40px;
+  }
+
+  .intro-header {
+    font-size: 3rem;
   }
 }
 
