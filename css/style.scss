@@ -85,9 +85,13 @@ nav {
     li:first-child {
       margin-top: 10px;
     }
-    li a.current {
-      font-weight: bold;
-      text-decoration: underline;
+    a.current {
+      font-weight: bold !important;
+      text-decoration: underline !important;
+    }
+    a.nav-link.current {
+      font-weight: bold !important;
+      text-decoration: underline !important;
     }
   }
   .burgermenu-icon .bar {

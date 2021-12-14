@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/daniel.css" />
     <script src="js/global.js" defer></script>
@@ -15,7 +16,7 @@
     <section id="navigation">
       <header>
         <nav class="">
-          <a href="#" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1">
+          <a href="index.html" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1">
             <div class="logo-wrapper">
               <img src="images/logo.svg" />
             </div>
@@ -31,14 +32,14 @@
             </li>
           </ul>
           <ul class="sidenav" id="mobile-menu">
-            <li><a href="main.html">Overview</a></li>
+            <li><a href="main.html" class="current">Overview</a></li>
             <li><a href="schedule.html">Schedule</a></li>
             <li><a href="assignments.html">Assigments</a></li>
             <li><a href="profile.html">Your Profile</a></li>
           </ul>
           <ul id="desktop-nav" class="col offset-l4 offset-m3">
             <li>
-              <a href="main.html" class="nav-link">Overview</a>
+              <a href="main.html" class="nav-link current">Overview</a>
             </li>
             <li>
               <a href="schedule.html" class="nav-link">Schedule</a>
@@ -67,31 +68,42 @@
                 <ul class="assignment-list">
                   <li>
                     <div>
-                      <p class="assignment-paragraph">React Project (Web Dev)</p>
-                      <p class="date assignment-paragraph">- Due Wed. January 12th</p>
+                      <p class="assignment-paragraph assignment-item">
+                        React Project (Web Dev) <span><img class="icon-xs" src="images/react-icon.svg" alt="" /></span>
+                      </p>
+                      <p class="date assignment-paragraph">Due Wed. January 29th</p>
                     </div>
                   </li>
                   <li>
-                    <p class="assignment-paragraph">UX Project (UX)</p>
-                    <p class="date assignment-paragraph">- Due Wed. January 12th</p>
+                    <p class="assignment-paragraph assignment-item">
+                      UX Project (UX) <span><img class="icon-xs" src="images/ux-icon.svg" alt="" /></span>
+                    </p>
+                    <p id="overdue" class="date assignment-paragraph">
+                      Overdue<span class="material-icons custom tooltipped" data-position="bottom" data-tooltip="Was due January 19th 2022"
+                        >error</span
+                      >
+                    </p>
                   </li>
-
-                  <a href="assignments.html" class="assignment-link">See all Assignments</a>
+                  <div class="">
+                    <a href="assignments.html" class="assignment-link">See all Assignments</a>
+                  </div>
                 </ul>
               </article>
               <article class="dash-link schedule-bg">
                 <h2 class="clamped">Upcoming Classes</h2>
+                <div class="col s12">
+                  <div class="class-wrapper">
+                    <p>Web Development</p>
+                    <p>Tue january 25th 12:00</p>
+                    <a href="schedule.html">See Schedule</a>
+                  </div>
+                  <div class="class-wrapper hide-on-med-and-down">
+                    <p>Intro to Spanish</p>
+                    <p>Fri january 28th 8:00</p>
+                  </div>
+                </div>
               </article>
             </div>
-            <div class="link-wrapper">
-              <article class="dash-link profile">
-                <h2 class="clamped">Upcoming Classes</h2>
-              </article>
-              <article class="dash-link resources">
-                <h2 class="clamped">Upcoming Classes</h2>
-              </article>
-            </div>
-        
           </section>
         </div>
         <div class="col s12 m12 l6">
@@ -104,30 +116,39 @@
                   <p class="timestamp"><time>50 minutes ago</time></p>
                 </div>
               </div>
+              <h3>Corona restrictions updated</h3>
               <p>
-                  <h3>Corona restrictions updated</h3>
-               As per December 10th, all students must present a valid Covid-19 test. You can get tested for free by the distinguished gentleman Arturo in his Spanish class in room 101 between 10-12
+                As per December 10th, all students must present a valid Covid-19 test. You can get tested for free by the distinguished gentleman
+                Arturo in his Spanish class in room 101 between 10-12
               </p>
               <img class="content-img" src="images/corona.jpg" alt="" />
             </article>
             <article class="content-wrapper">
-                <div class="item-wrapper">
-                  <img class="icon" src="images/romeo.png" alt="" />
-                  <div class="news-box">
-                    <h2>Romeo Baylee</h2>
-                    <p class="timestamp"><time>2 hours ago</time></p>
-                  </div>
+              <div class="item-wrapper">
+                <img class="icon" src="images/romeo.png" alt="" />
+                <div class="news-box">
+                  <h2>Romeo Baylee</h2>
+                  <p class="timestamp"><time>2 hours ago</time></p>
                 </div>
-                <p>
-                    <h3>Today's classes cancelled</h3>
-                 As both my husband and my son has been infected with Covid-19. Today's classes are cancelled until my test-results come back negative. Will keep you posted here on Froodle &trade;
-                </p>
-                <img class="content-img" src="images/cancelled.jpg" alt="" />
-              </article>
+              </div>
+              <h3>Tomorrow's classes are cancelled</h3>
+              <p>
+                As both my husband and my son has been infected with Covid-19. Tomorrow's classes are cancelled until my test-results come back
+                negative. Remember the React Asignment for next week, materials are up in your assignments tab. Will keep you posted here on Froodle
+                &trade;
+              </p>
+              <img class="content-img" src="images/cancelled.jpg" alt="" />
+            </article>
           </section>
         </div>
       </div>
     </div>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elems = document.querySelectorAll(".tooltipped");
+        const instances = M.Tooltip.init(elems);
+      });
+    </script>
   </body>
 </html>
