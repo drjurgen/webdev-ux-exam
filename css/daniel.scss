@@ -126,6 +126,10 @@ h1 {
 #overdue {
   color: $warning-color;
 }
+.special-text {
+  font-weight: bold;
+  color: $tertiary-green !important;
+}
 .icon {
   width: 60px;
   height: 60px;

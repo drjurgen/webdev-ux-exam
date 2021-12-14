@@ -130,6 +130,11 @@ h1 {
   color: #eb6d6d;
 }
 
+.special-text {
+  font-weight: bold;
+  color: #2d6a4f !important;
+}
+
 .icon {
   width: 60px;
   height: 60px;
