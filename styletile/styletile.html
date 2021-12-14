@@ -1,114 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="icon" type="image/x-icon" href="/styletile/img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Froodle - Style tile</title>
-</head>
+    <title>Froodle - Style tile</title>
+  </head>
 
-<body>
-  <section id="navigation">
-    <header>
-      <nav class="row">
-        <a href="#" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1 ">
-          <div class="logo-wrapper">
-            <img src="img/logo.svg">
-          </div>
-        </a>
-
-        <ul id="mobile-nav" class="col offset-s8">
-          <li>
-            <div class="burgermenu-icon">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
+  <body>
+    <section id="navigation">
+      <header>
+        <nav class="row">
+          <a href="#" class="nav-logo nav-logo-link col s2 m2 l2 offset-l1 offset-m1">
+            <div class="logo-wrapper">
+              <img src="img/logo.svg" />
             </div>
-          </li>
-        </ul>
+          </a>
 
-        <ul id="desktop-nav" class="col offset-l4 offset-m3">
-          <li>
-            <a href="#" class="nav-link">Overview</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Schedule</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Assignments</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">
-              <div class="avatar"></div>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </section>
+          <ul id="mobile-nav" class="col offset-s8">
+            <li>
+              <div class="burgermenu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </li>
+          </ul>
 
-  <h1 id="style-tile-heading">Froodle - Style tile</h1>
+          <ul id="desktop-nav" class="col offset-l4 offset-m3">
+            <li>
+              <a href="#" class="nav-link">Overview</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">Schedule</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">Assignments</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">
+                <div class="avatar"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </section>
 
-  <section class="color-font-container">
-    <article class="item color-1">
-      <h2>Some font</h2>
-      <p>#d8f3dc</p>
-      <p>Body text here</p>
-    </article>
-    <article class="item color-2">
-      <h2>Some font</h2>
-      <p>#40916c</p>
-      <p>Body text here</p>
-    </article>
-    <article class="item color-3">
-      <h2>Some font</h2>
-      <p>#2d6a4f</p>
-      <p>Body text here</p>
-    </article>
-    <article class="item color-4">
-      <h2>Some font</h2>
-      <p>#eb6d6d</p>
-      <p>Body text here</p>
-    </article>
+    <h1 id="style-tile-heading">Froodle - Style tile</h1>
 
-  </section>
+    <section class="color-font-container">
+      <article class="item color-1">
+        <h2 class="alternate-text">Atkinson Hyperlegible</h2>
+        <p class="alternate-text">#d8f3dc</p>
+        <p class="alternate-text">Body text here</p>
+      </article>
+      <article class="item color-2">
+        <h2>Atkinson Hyperlegible</h2>
+        <p>#40916c</p>
+        <p>Body text here</p>
+      </article>
+      <article class="item color-3">
+        <h2>Atkinson Hyperlegible</h2>
+        <p>#2d6a4f</p>
+        <p>Body text here</p>
+      </article>
+      <article class="item color-4">
+        <h2>Atkinson Hyperlegible</h2>
+        <p>#eb6d6d</p>
+        <p>Body text here</p>
+      </article>
+    </section>
 
-  <section id="btns-container">
-    <button class="waves-effect waves-light btn btn-large" data-target="modal1">Primary button</button>
-    <button class="waves-effect waves-light btn btn-large">Secondary button</button>
-  </section>
+    <section id="btns-container">
+      <button class="waves-effect waves-light btn btn-large primary-btn">Primary button</button>
+      <button class="waves-effect waves-light btn btn-large secondary-btn">Secondary button</button>
+      <button class="waves-effect waves-light btn btn-large primary-btn modal-trigger" href="#modal1">Modal Example</button>
 
-  <section id="card-container">
-    <article class="card white darken-1">
-      <div class="card-content">
-        <span class="card-title">Card Title</span>
-        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-          require little markup to use effectively.</p>
-      </div>
-    </article>
-  </section>
-
-  <section id="input-container">
-    <div class="row">
-      <form>
-        <div>
-          <div class="input-field">
-            <input id="last_name" type="text" class="validate" />
-            <label for="last_name">Input label</label>
-          </div>
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
         </div>
-      </form>
-    </div>
-  </section>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat error">Close</a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>Copyright &copy; Froodle&trade; 2021</p>
-  </footer>
+    <section id="card-container">
+      <article class="card white darken-1">
+        <div class="card-content">
+          <span class="card-title">Card Title</span>
+          <p>
+            I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use
+            effectively.
+          </p>
+        </div>
+      </article>
+    </section>
 
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
+    <section id="input-container">
+      <div class="row">
+        <form>
+          <div>
+            <div class="input-field">
+              <input id="last_name" type="text" class="validate" />
+              <label for="last_name">Input label</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
 
+    <footer>
+      <p>Copyright &copy; Froodle&trade; 2021</p>
+    </footer>
+
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elems = document.querySelectorAll(".modal");
+        const instances = M.Modal.init(elems);
+      });
+    </script>
+  </body>
 </html>

@@ -4,13 +4,16 @@ $tertiary-green: #2d6a4f;
 $warning-color: #eb6d6d;
 $italic: italic;
 $primary-text: #fafafa;
+$secondary-text: #000000;
 $primary-border-radius: 15px;
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   box-shadow: none !important;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 img {
   width: 100%;
@@ -42,7 +45,16 @@ h2 {
   margin: 0 8px;
   border-radius: $primary-border-radius;
 }
-
+.alternate-text {
+  color: $secondary-text;
+}
+.primary-btn {
+  background: $tertiary-green;
+}
+.secondary-btn {
+  background: $primary-green;
+  color: $tertiary-green;
+}
 .card {
   border: 1px solid #999;
   border-radius: $primary-border-radius;
@@ -54,12 +66,13 @@ h2 {
 }
 
 nav {
-  margin: 0 0 40px 0;
+  margin: 0 !important;
   padding: 24px 0px;
   background-color: $tertiary-green;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   @media only screen and (min-width: 600px) {
     padding: 24px 32px;
   }
@@ -68,15 +81,31 @@ nav {
       margin-left: unset !important;
     }
   }
-
   h1 {
     font-size: 1.5rem;
   }
 
   .burgermenu-icon {
     cursor: pointer;
+    margin-bottom: -23px;
   }
-
+  .sidenav {
+    background: $secondary-green;
+    a {
+      color: $primary-text;
+    }
+    li:first-child {
+      margin-top: 10px;
+    }
+    a.current {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    a.nav-link.current {
+      font-weight: bold !important;
+      text-decoration: underline !important;
+    }
+  }
   .burgermenu-icon .bar {
     width: 24px;
     height: 2px;
@@ -117,7 +146,10 @@ nav {
     display: flex;
     img {
       width: unset;
-      max-height: 95%;
+      height: 60px;
+      max-height: 100%;
+      z-index: 2;
+      margin-top: -10px;
     }
   }
 }
@@ -157,13 +189,6 @@ footer {
     background: $primary-green;
   }
   .color-2 {
-    .logo-wrapper {
-      display: flex;
-      img {
-        width: unset;
-        max-height: 95%;
-      }
-    }
     color: $primary-text;
     background: $secondary-green;
   }

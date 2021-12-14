@@ -1,9 +1,11 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   box-shadow: none !important;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 img {
@@ -38,6 +40,19 @@ h2 {
   border-radius: 15px;
 }
 
+.alternate-text {
+  color: #000000;
+}
+
+.primary-btn {
+  background: #2d6a4f;
+}
+
+.secondary-btn {
+  background: #d8f3dc;
+  color: #2d6a4f;
+}
+
 .card {
   border: 1px solid #999;
   border-radius: 15px;
@@ -48,7 +63,7 @@ h2 {
 }
 
 nav {
-  margin: 0 0 40px 0;
+  margin: 0 !important;
   padding: 24px 0px;
   background-color: #2d6a4f;
   display: flex;
@@ -70,6 +85,24 @@ nav h1 {
 }
 nav .burgermenu-icon {
   cursor: pointer;
+  margin-bottom: -23px;
+}
+nav .sidenav {
+  background: #40916c;
+}
+nav .sidenav a {
+  color: #fafafa;
+}
+nav .sidenav li:first-child {
+  margin-top: 10px;
+}
+nav .sidenav a.current {
+  font-weight: bold;
+  text-decoration: underline;
+}
+nav .sidenav a.nav-link.current {
+  font-weight: bold !important;
+  text-decoration: underline !important;
 }
 nav .burgermenu-icon .bar {
   width: 24px;
@@ -106,7 +139,10 @@ nav .logo-wrapper {
 }
 nav .logo-wrapper img {
   width: unset;
-  max-height: 95%;
+  height: 60px;
+  max-height: 100%;
+  z-index: 2;
+  margin-top: -10px;
 }
 
 footer {
@@ -146,13 +182,6 @@ footer {
 .color-font-container .color-2 {
   color: #fafafa;
   background: #40916c;
-}
-.color-font-container .color-2 .logo-wrapper {
-  display: flex;
-}
-.color-font-container .color-2 .logo-wrapper img {
-  width: unset;
-  max-height: 95%;
 }
 .color-font-container .color-3 {
   color: #fafafa;

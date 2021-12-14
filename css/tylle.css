@@ -81,9 +81,13 @@ nav .sidenav a {
 nav .sidenav li:first-child {
   margin-top: 10px;
 }
-nav .sidenav li a.current {
-  font-weight: bold;
-  text-decoration: underline;
+nav .sidenav a.current {
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}
+nav .sidenav a.nav-link.current {
+  font-weight: bold !important;
+  text-decoration: underline !important;
 }
 nav .burgermenu-icon .bar {
   width: 24px;
