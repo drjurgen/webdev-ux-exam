@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/daniel.css" />
     <script src="js/global.js" defer></script>
@@ -70,14 +71,18 @@
                       <p class="assignment-paragraph assignment-item">
                         React Project (Web Dev) <span><img class="icon-xs" src="images/react-icon.svg" alt="" /></span>
                       </p>
-                      <p class="date assignment-paragraph">Due Wed. January 12th</p>
+                      <p class="date assignment-paragraph">Due Wed. January 29th</p>
                     </div>
                   </li>
                   <li>
                     <p class="assignment-paragraph assignment-item">
                       UX Project (UX) <span><img class="icon-xs" src="images/ux-icon.svg" alt="" /></span>
                     </p>
-                    <p class="date assignment-paragraph">Due Wed. January 19th</p>
+                    <p id="overdue" class="date assignment-paragraph">
+                      Overdue<span class="material-icons custom tooltipped" data-position="bottom" data-tooltip="Was due January 19th 2022"
+                        >error</span
+                      >
+                    </p>
                   </li>
                   <div class="">
                     <a href="assignments.html" class="assignment-link">See all Assignments</a>
@@ -126,10 +131,11 @@
                   <p class="timestamp"><time>2 hours ago</time></p>
                 </div>
               </div>
-              <h3>Today's classes cancelled</h3>
+              <h3>Tomorrow's classes are cancelled</h3>
               <p>
-                As both my husband and my son has been infected with Covid-19. Today's classes are cancelled until my test-results come back negative.
-                Will keep you posted here on Froodle &trade;
+                As both my husband and my son has been infected with Covid-19. Tomorrow's classes are cancelled until my test-results come back
+                negative. Remember the React Asignment for next week, materials are up in your assignments tab. Will keep you posted here on Froodle
+                &trade;
               </p>
               <img class="content-img" src="images/cancelled.jpg" alt="" />
             </article>
@@ -138,5 +144,11 @@
       </div>
     </div>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elems = document.querySelectorAll(".tooltipped");
+        const instances = M.Tooltip.init(elems);
+      });
+    </script>
   </body>
 </html>

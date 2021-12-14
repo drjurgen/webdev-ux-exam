@@ -126,6 +126,10 @@ h1 {
   overflow: scroll;
 }
 
+#overdue {
+  color: #eb6d6d;
+}
+
 .icon {
   width: 60px;
   height: 60px;
