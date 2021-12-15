@@ -12,6 +12,9 @@ $primary-border-radius: 15px;
   margin: 0;
   box-shadow: none !important;
 }
+body {
+  overflow-x: hidden;
+}
 img {
   width: 100%;
 }
